@@ -1,0 +1,59 @@
+.call-tree {
+    border: 1px solid rgb(222, 223, 224);
+    border-right: none;
+}
+
+.call-tree > div{
+    display: flex;
+    font-size: 12px;
+    color: rgb(71, 72, 96);
+}
+
+.call-tree .call-tree-header {
+    font-weight: bold;
+}
+
+.call-tree .row.selected {
+    background: rgb(222, 241, 214);
+}
+
+.call-tree > div > div {
+    flex: 1;
+}
+
+.call-tree .icon {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+.call-tree .icon:after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    display: block;
+}
+
+.call-tree .unexpand:after, .call-tree .expand:after {
+    border: 1px solid rgb(71, 72, 96);
+    border-top: none;
+    border-left: none;
+}
+
+.call-tree .unexpand:after {
+    transform: rotate(-45deg);
+    top: -9px;
+    right: 3px;
+}
+
+.call-tree .expand:after {
+    transform: rotate(45deg);
+    top: -10px;
+    right: 2px;
+}
+
+.call-tree .column, .call-tree .call-tree-header > div {
+    border-right: 1px solid rgb(222, 223, 224);
+    padding: 5px 12px;
+}
